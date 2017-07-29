@@ -1,13 +1,20 @@
 import { h, Component } from 'preact';
-import style from './style';
+import styled from 'styled-components';
+import Card from '../../components//card/index';
+
+const HomeWrapper = styled.main`
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+`;
 
 export default class Home extends Component {
 	render() {
 		return (
-			<div class={style.home}>
-				<h1>Home</h1>
-				<p>This is the Home component.</p>
-			</div>
+			<HomeWrapper>
+				<Card />
+			</HomeWrapper>
 		);
 	}
 }

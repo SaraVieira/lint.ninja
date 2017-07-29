@@ -1,47 +1,57 @@
 import { h, Component } from 'preact';
-import style from './style';
+import capitalize from 'capitalize-it';
+import styled from 'styled-components';
+import linters from '../../data/data';
 
+const CategoryWrapper = styled.main`
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+`;
 export default class Category extends Component {
 	state = {
-		time: Date.now(),
-		count: 10
+		linters: []
 	};
+
+	getLinters(category) {
+		const linter = linters.filter(linter => linter.category === category);
+
+		this.setState({ linters: linter });
+	}
 
 	// gets called when this route is navigated to
 	componentDidMount() {
-		// start a timer for the clock:
-		this.timer = setInterval(this.updateTime, 1000);
+		const category = this.props.category;
+		this.getLinters(category);
 	}
-
-	// gets called just before navigating away from the route
-	componentWillUnmount() {
-		clearInterval(this.timer);
-	}
-
-	// update the current time
-	updateTime = () => {
-		this.setState({ time: Date.now() });
-	};
-
-	increment = () => {
-		this.setState({ count: this.state.count+1 });
-	};
 
 	// Note: `user` comes from the URL, courtesy of our router
-	render({ category }, { time, count }) {
+	render({ category }, { linters }) {
 		return (
-			<div class={style.profile}>
-				<h1>Profile: {category}</h1>
-				<p>This is the category profile for a category named { category }.</p>
-
-				<div>Current time: {new Date(time).toLocaleString()}</div>
-
-				<p>
-					<button onClick={this.increment}>Click Me</button>
-					{' '}
-					Clicked {count} times.
-				</p>
-			</div>
+			<CategoryWrapper>
+				<h1>
+					{capitalize(category)} Linters:
+				</h1>
+				<ul>
+					{linters.map(linter =>
+						(<li>
+							<h2>
+								<a href={`https://github.com/${linter.creator}/${linter.name}`}>
+									{linter.name}
+								</a>
+							</h2>
+							<p>
+								{linter.description}
+							</p>
+							<a href={`https://github.com/${linter.creator}`}>
+								{linter.creator}
+							</a>
+						</li>)
+					)}
+				</ul>
+			</CategoryWrapper>
 		);
 	}
 }
