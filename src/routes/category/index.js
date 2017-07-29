@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import style from './style';
 
-export default class Profile extends Component {
+export default class Category extends Component {
 	state = {
 		time: Date.now(),
 		count: 10
@@ -28,11 +28,11 @@ export default class Profile extends Component {
 	};
 
 	// Note: `user` comes from the URL, courtesy of our router
-	render({ user }, { time, count }) {
+	render({ category }, { time, count }) {
 		return (
 			<div class={style.profile}>
-				<h1>Profile: {user}</h1>
-				<p>This is the user profile for a user named { user }.</p>
+				<h1>Profile: {category}</h1>
+				<p>This is the category profile for a category named { category }.</p>
 
 				<div>Current time: {new Date(time).toLocaleString()}</div>
 
