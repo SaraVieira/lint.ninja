@@ -50,7 +50,7 @@ const Github = styled.a`
 
 const Header = () =>
 	(<header>
-		<Github href="">
+		<Github href="https://github.com/SaraVieira/wutthelint" target="_blank">
 			<img src={git} alt="Github" />
 		</Github>
 		<Nav>

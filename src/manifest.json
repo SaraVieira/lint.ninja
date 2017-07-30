@@ -1,18 +1,18 @@
 {
-  "name": "Preact PWA",
-  "short_name": "Preact PWA",
+  "name": "wutthelint?",
+  "short_name": "wutthelint?",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "background_color": "#FAFAFA",
+  "theme_color": "#c62727",
   "icons": [{
-    "src": "/assets/icons/android-chrome-192x192.png",
+    "src": "/assets/icons/android-icon-192x192.png",
     "type": "image/png",
     "sizes": "192x192"
   },
   {
-    "src": "/assets/icons/android-chrome-512x512.png",
+    "src": "/assets/icons/android-icon-512.png",
     "type": "image/png",
     "sizes": "512x512"
   }]
