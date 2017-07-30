@@ -14,6 +14,14 @@ const CardWrapper = styled.section`
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	margin-bottom: 40px;
 	padding: 40px;
+
+	@media (max-width: 950px) {
+		width: 48%;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const Logo = styled.h1`
@@ -22,18 +30,25 @@ const Logo = styled.h1`
 	padding: 15px 40px;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 1.4em;
+	font-size: 1.4vw;
 	font-weight: normal;
-	line-height: 32px;
 	letter-spacing: 8px;
 	transition: all 300ms ease;
 	position: relative;
 	cursor: pointer;
 	text-align: center;
 
+	@media (max-width: 768px) {
+		font-size: 3.5vw;
+	}
+
 	a {
 		color: #fff;
 		text-decoration: none;
+
+		&:after {
+			display: none;
+		}
 	}
 
 	&:before {
@@ -97,7 +112,7 @@ class Card extends Component {
 							<Logo>
 								<Name>
 									<Link href={`/category/${category}`}>
-										{capitalize(category)}
+										{category.replace(/\-/g, ' ')}
 									</Link>
 								</Name>
 							</Logo>

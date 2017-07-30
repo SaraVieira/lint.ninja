@@ -14,6 +14,8 @@ const Input = styled.input`
 	font-weight: bold;
 	letter-spacing: 1.2px;
 	font-size: 14px;
+	max-width: 80%;
+	margin: auto;
 
 	&:focus {
 		outline: none;
@@ -102,14 +104,11 @@ const InputWrapper = styled.div`
 class Search extends Component {
 	changeRoute(e) {
 		const value = e.target.value;
+		const input = e.target;
 
 		if (value.length > 1) {
 			route(`/search/${value}`);
-		}
-	}
-	componentDidMount() {
-		if (this.props.value) {
-			this.input.focus();
+			input.focus();
 		}
 	}
 
@@ -117,7 +116,6 @@ class Search extends Component {
 		return (
 			<InputWrapper>
 				<Input
-					ref={c => (this.input = c)}
 					onInput={this.changeRoute}
 					type="text"
 					value={value}

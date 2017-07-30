@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import capitalize from 'capitalize-it';
 import styled from 'styled-components';
 import linters from '../../data/data';
+import Linter from '../../components/linter/index';
 
 const CategoryWrapper = styled.main`
 	width: 80%;
@@ -35,21 +36,7 @@ export default class Category extends Component {
 					{capitalize(category)} Linters:
 				</h1>
 				<ul>
-					{linters && linters.map(linter =>
-						(<li>
-							<h2>
-								<a href={linter.url}>
-									{linter.name}
-								</a>
-							</h2>
-							<p>
-								{linter.description}
-							</p>
-							<a href={`https://github.com/${linter.creator}`}>
-								{linter.creator}
-							</a>
-						</li>)
-					)}
+					{linters && linters.map(linter => <Linter linter={linter} />)}
 				</ul>
 			</CategoryWrapper>
 		);

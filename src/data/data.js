@@ -82,6 +82,7 @@ const linters = [
 		link: 'https://github.com/tclindner/npm-package-json-lint',
 		description:
 			'Configurable linter to enforce standards in npm package.json files.',
+		creator: 'tclindner',
 		category: 'random'
 	},
 	{
@@ -502,7 +503,6 @@ const linters = [
 		creator: 'twbs',
 		category: 'HTML'
 	},
-
 	{
 		name: 'jsonlint',
 		link: 'https://github.com/zaach/jsonlint',
@@ -510,6 +510,154 @@ const linters = [
 			'A pure JavaScript version of the service provided at jsonlint.com.',
 		creator: 'zaach',
 		category: 'JSON'
+	},
+	{
+		name: 'no-inferred-method-name ',
+		link: 'https://github.com/johnstonbl01/eslint-no-inferred-method-name',
+		description:
+			'Custom rule for ESLint that checks for inferred method names within object literals.',
+		creator: 'johnstonbl01',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'no-loops',
+		link: 'https://github.com/buildo/eslint-plugin-no-loops',
+		description: "It's 2017 and you still use loops?",
+		creator: 'buildo',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'no-use-extend-native',
+		link: 'https://github.com/dustinspecker/eslint-plugin-no-use-extend-native',
+		description: 'Prevent using extended native objects',
+		creator: 'dustinspecker',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'Promises',
+		link: 'https://github.com/xjamundx/eslint-plugin-promise',
+		description: 'Best practices when working with promises.',
+		creator: 'xjamundx',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'Security',
+		link: 'https://github.com/nodesecurity/eslint-plugin-security',
+		description: 'ESLint rules for Node Security',
+		creator: 'nodesecurity',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'this',
+		link: 'https://github.com/matijs/eslint-plugin-this',
+		description: "Write pure functions, don't allow this",
+		creator: 'matijs',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'XSS',
+		link: 'https://github.com/Rantanen/eslint-plugin-xss',
+		description:
+			'Tries to detect XSS issues in codebase before they end up in production',
+		creator: 'Rantanen',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'Filenames',
+		link: 'https://github.com/selaux/eslint-plugin-filenames',
+		description: 'Ensure consistent filenames for your javascript files',
+		creator: 'selaux',
+		category: 'eslint-plugin'
+	},
+	{
+		name: 'GitHub',
+		link: 'https://github.com/primer/stylelint-config-primer',
+		description: "Sharable stylelint config used by GitHub's CSS",
+		creator: 'primer',
+		category: 'stylelint-config'
+	},
+	{
+		name: 'Standard',
+		link: 'https://github.com/stylelint/stylelint-config-standard',
+		description: 'The standard shareable config for stylelint',
+		creator: 'stylelint',
+		category: 'stylelint-config'
+	},
+	{
+		name: 'Wikimedia',
+		link: 'https://github.com/wikimedia/stylelint-config-wikimedia',
+		description:
+			'Wikimedia CSS Coding Standards shareable config for stylelint',
+		creator: 'wikimedia',
+		category: 'stylelint-config'
+	},
+	{
+		name: 'Wordpress',
+		link: 'https://github.com/ntwb/stylelint-config-wordpress/',
+		description:
+			'WordPress CSS Coding Standards shareable config for stylelint',
+		creator: 'ntwb',
+		category: 'stylelint-config'
+	},
+	{
+		name: 'stylelint-checkstyle-formatter',
+		link: 'https://github.com/davidtheclark/stylelint-checkstyle-formatter',
+		description: 'Output Checkstyle XML reports of stylelint results',
+		creator: 'davidtheclark',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-order',
+		link: 'https://github.com/hudochenkov/stylelint-declaration-block-order',
+		description: 'A collection of order related linting rules for stylelint.',
+		creator: 'hudochenkov',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-property-groups-structure ',
+		link: 'https://github.com/hudochenkov/stylelint-property-groups-structure',
+		description:
+			'stylelint plugin which requires or disallow an empty line before property groups.e',
+		creator: 'hudochenkov',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-scss',
+		link: 'https://github.com/kristerkari/stylelint-scss',
+		description: 'A collection of SCSS specific linting rules for stylelint.',
+		creator: 'kristerkari',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-selector-bem-pattern',
+		link: 'https://github.com/davidtheclark/stylelint-selector-bem-pattern',
+		description: 'A stylelint plugin that incorporates postcss-bem-linter.',
+		creator: 'davidtheclark',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-declaration-use-variable',
+		link: 'https://github.com/sh-waqar/stylelint-declaration-use-variable',
+		description:
+			'A stylelint plugin to check the use of variables on declaration in (less/scss/css).',
+		creator: 'sh-waqar',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-no-unsupported-browser-features',
+		link: 'https://github.com/ismay/stylelint-no-unsupported-browser-features',
+		description:
+			'🤵 Disallow features that are unsupported by the browsers that you are targeting',
+		creator: 'ismay',
+		category: 'stylelint-plugin'
+	},
+	{
+		name: 'stylelint-declaration-strict-value',
+		link: 'https://github.com/AndyOGo/stylelint-declaration-strict-value',
+		description:
+			"A stylelint plugin that enforces either variables ($sass, @less, var(--cssnext)), functions or custom CSS keywords (inherit, none, etc.) for property's values.",
+		creator: 'AndyOGo',
+		category: 'stylelint-plugin'
 	}
 ];
 

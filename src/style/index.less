@@ -1,4 +1,4 @@
-@import 'helpers';
+@import url('https://fonts.googleapis.com/css?family=Raleway:300i');
 
 html, body {
 	height: 100%;
@@ -19,4 +19,27 @@ html, body {
 
 #app {
 	height: 100%;
+}
+
+a {
+	color: #0971b2;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover {
+	color: #1485CC;
+}
+
+a:hover:after {
+	width: 100%;
+}
+
+a:after {
+	width: 0px;
+	transition: width ease 300ms;
+	height: 2px;
+	background: #1485CC;
+	content: '';
+	display: block;
 }
