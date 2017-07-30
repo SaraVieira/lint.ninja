@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 import styled from 'styled-components';
 import Card from '../../components//card/index';
 import Search from '../../components/search/index';
@@ -11,13 +11,10 @@ const HomeWrapper = styled.main`
 	flex-direction: column;
 `;
 
-export default class Home extends Component {
-	render() {
-		return (
-			<HomeWrapper>
-				<Search />
-				<Card />
-			</HomeWrapper>
-		);
-	}
-}
+const Home = () =>
+	(<HomeWrapper>
+		<Search />
+		<Card />
+	</HomeWrapper>);
+
+export default Home;
