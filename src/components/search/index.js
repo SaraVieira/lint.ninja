@@ -101,6 +101,11 @@ const InputWrapper = styled.div`
 	margin-bottom: 24px;
 `;
 
+const Label = styled.label`
+	text-indent: -99999px;
+	position: absolute;
+`;
+
 class Search extends Component {
 	changeRoute(e) {
 		const value = e.target.value;
@@ -115,11 +120,13 @@ class Search extends Component {
 	render({ value }) {
 		return (
 			<InputWrapper>
+				<Label for="linter">Search for a linter...</Label>
 				<Input
 					onInput={this.changeRoute}
 					type="text"
 					value={value}
 					placeholder="Search for a linter..."
+					id="linter"
 				/>
 				<span class="focus-border">
 					<i />
