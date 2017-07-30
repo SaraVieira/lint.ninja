@@ -12,7 +12,7 @@ const CategoryWrapper = styled.main`
 `;
 export default class Category extends Component {
 	state = {
-		linters: []
+		linters: null
 	};
 
 	getLinters(category) {
@@ -35,10 +35,10 @@ export default class Category extends Component {
 					{capitalize(category)} Linters:
 				</h1>
 				<ul>
-					{linters.map(linter =>
+					{linters && linters.map(linter =>
 						(<li>
 							<h2>
-								<a href={`https://github.com/${linter.creator}/${linter.name}`}>
+								<a href={linter.url}>
 									{linter.name}
 								</a>
 							</h2>

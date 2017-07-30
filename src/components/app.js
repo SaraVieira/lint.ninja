@@ -3,6 +3,7 @@ import { Router } from 'preact-router';
 
 import Header from './header';
 import Home from '../routes/home';
+import SearchRoute from '../routes/search';
 import Category from '../routes/category';
 // import Home from 'async!./home';
 // import Category from 'async!./profile';
@@ -24,6 +25,7 @@ export default class App extends Component {
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
 					<Category path="/category/:category" />
+					<SearchRoute path="/search/:query" />
 				</Router>
 			</div>
 		);

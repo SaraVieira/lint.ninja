@@ -12,6 +12,8 @@ const CardWrapper = styled.section`
 	justify-content: center;
 	background: #404040;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	margin-bottom: 40px;
+	padding: 40px;
 `;
 
 const Logo = styled.h1`
@@ -27,6 +29,7 @@ const Logo = styled.h1`
 	transition: all 300ms ease;
 	position: relative;
 	cursor: pointer;
+	text-align: center;
 
 	a {
 		color: #fff;
