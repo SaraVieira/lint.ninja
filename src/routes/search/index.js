@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 import capitalize from 'capitalize-it';
 import styled from 'styled-components';
 import linters from '../../data/data';
-import Search from '../../components/search/index';
 import Linter from '../../components/linter/index';
 
 const CategoryWrapper = styled.main`
@@ -52,9 +51,6 @@ export default class SearchRoute extends Component {
 	render({ query }, { linters }) {
 		return (
 			<CategoryWrapper>
-				<div>
-					<Search value={this.props.query} />
-				</div>
 				<h1>
 					Results for {capitalize(query)}:
 				</h1>

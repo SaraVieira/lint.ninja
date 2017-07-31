@@ -1,7 +1,6 @@
 import { h } from 'preact';
 import styled from 'styled-components';
 import Card from '../../components//card/index';
-import Search from '../../components/search/index';
 
 const HomeWrapper = styled.main`
 	width: 80%;
@@ -13,7 +12,6 @@ const HomeWrapper = styled.main`
 
 const Home = () =>
 	(<HomeWrapper>
-		<Search />
 		<Card />
 	</HomeWrapper>);
 

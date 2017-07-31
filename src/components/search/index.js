@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { route } from 'preact-router';
 
 const Input = styled.input`
-	width: 350px;
-	height: 40px;
+	width: 100%;
+	height: 100%;
 	display: block;
 	border: 1px solid #ccc;
 	padding: 7px 14px 9px;
@@ -14,8 +14,6 @@ const Input = styled.input`
 	font-weight: bold;
 	letter-spacing: 1.2px;
 	font-size: 14px;
-	max-width: 80%;
-	margin: auto;
 
 	&:focus {
 		outline: none;
@@ -98,6 +96,10 @@ const Input = styled.input`
 
 const InputWrapper = styled.div`
 	position: relative;
+	max-width: 80%;
+	margin: auto;
+	width: 350px;
+	height: 40px;
 	margin-bottom: 24px;
 `;
 
@@ -117,14 +119,23 @@ class Search extends Component {
 		}
 	}
 
-	render({ value }) {
+	getURL() {
+		const path = window.location.pathname.split('/');
+
+		if (path.length === 3) {
+			return path[2];
+		}
+	}
+
+	render() {
 		return (
 			<InputWrapper>
 				<Label for="linter">Search for a linter...</Label>
 				<Input
 					onInput={this.changeRoute}
+					onBlur={this.changeRoute}
 					type="text"
-					value={value}
+					value={this.getURL()}
 					placeholder="Search for a linter..."
 					id="linter"
 				/>

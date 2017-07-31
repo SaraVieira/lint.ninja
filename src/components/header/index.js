@@ -1,5 +1,6 @@
 import { h } from 'preact';
 
+import Search from '../search/index';
 import styled from 'styled-components';
 
 import logo from '../../assets/logo.svg';
@@ -63,6 +64,7 @@ const Header = () =>
 			</Link>
 		</Nav>
 		<Tag>There's a linter for that!</Tag>
+		<Search />
 	</header>);
 
 export default Header;
