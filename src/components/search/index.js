@@ -120,10 +120,12 @@ class Search extends Component {
 	}
 
 	getURL() {
-		const path = window.location.pathname.split('/');
+		if (typeof window !== 'undefined') {
+			const path = window.location.pathname.split('/');
 
-		if (path.length === 3) {
-			return path[2];
+			if (path.length === 3) {
+				return path[2];
+			}
 		}
 	}
 

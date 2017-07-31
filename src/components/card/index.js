@@ -1,7 +1,6 @@
 import { h, Component } from 'preact';
 import styled from 'styled-components';
 import { Link } from 'preact-router/match';
-import capitalize from 'capitalize-it';
 import linters from '../../data/data';
 
 const CardWrapper = styled.section`
@@ -112,7 +111,7 @@ class Card extends Component {
 							<Logo>
 								<Name>
 									<Link href={`/category/${category}`}>
-										{category.replace(/\-/g, ' ')}
+										{category.replace(/-/g, ' ')}
 									</Link>
 								</Name>
 							</Logo>

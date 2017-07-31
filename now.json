@@ -1,7 +1,0 @@
-{
-    "name": "wuththelint",
-    "alias": "wuththelint",
-    "env": {
-        "NODE_ENV": "production"
-    }
-}

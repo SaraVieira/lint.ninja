@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint src && preact test",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "test": "eslint src",
+    "start": "npm run -s serve",
     "build": "preact build",
     "serve": "preact build && preact serve",
     "dev": "preact watch"
   },
+  "alias": "wuththelint",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,9 +22,7 @@
     "eslint-config-synacor": "^1.0.1",
     "flow-bin": "^0.51.1",
     "if-env": "^1.0.0",
-    "preact-cli": "^1.4.1",
-    "preact-cli-lodash": "^1.1.0",
-    "preact-cli-plugin-flow": "^0.2.0"
+    "preact-cli": "^1.4.1"
   },
   "dependencies": {
     "capitalize-it": "^1.2.1",
