@@ -7,12 +7,13 @@
     "test": "eslint src",
     "start": "npm run -s serve",
     "build": "preact build",
-    "serve": "preact build && preact serve",
+    "serve": "preact serve",
+    "deploy": "npm run build && cp now.json build/now.json && cd build && now && now alias",
     "dev": "preact watch"
   },
   "alias": "wuththelint",
   "keywords": [],
-  "author": "",
+  "author": "Sara Vieira",
   "license": "ISC",
   "eslintConfig": {
     "extends": "eslint-config-synacor"
@@ -22,7 +23,8 @@
     "eslint-config-synacor": "^1.0.1",
     "flow-bin": "^0.51.1",
     "if-env": "^1.0.0",
-    "preact-cli": "^1.4.1"
+    "preact-cli": "^1.4.1",
+    "preact-cli-sw-precache": "^1.0.0"
   },
   "dependencies": {
     "capitalize-it": "^1.2.1",
