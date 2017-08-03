@@ -1,9 +1,16 @@
 const linters = [
 	{
 		name: 'Awesome Lint',
-		link: 'https://github.com/sindresorhus/awesome-lint',
+		link: 'https://github.com/marionebl/commitlint',
 		description:
 			'Linter for Awesome lists. Intended to make it easier to create and maintain Awesome lists.',
+		creator: 'marionebl',
+		category: 'random'
+	},
+	{
+		name: 'commitlint',
+		link: 'https://github.com/sindresorhus/awesome-lint',
+		description: '📓 Lint commit messages',
 		creator: 'sindresorhus',
 		category: 'random'
 	},
@@ -658,6 +665,75 @@ const linters = [
 			"A stylelint plugin that enforces either variables ($sass, @less, var(--cssnext)), functions or custom CSS keywords (inherit, none, etc.) for property's values.",
 		creator: 'AndyOGo',
 		category: 'stylelint-plugin'
+	},
+	{
+		name: 'Naive linter for English prose',
+		link: 'https://github.com/btford/write-good',
+		description:
+			"Naive linter for English prose for developers who can't write good and wanna learn to do other stuff good too.",
+		creator: 'btford',
+		category: 'random'
+	},
+	{
+		name: 'Alex',
+		link: 'https: //github.com/wooorm/alex',
+		description:
+			"Catch insensitive, inconsiderate writing",
+		creator: 'wooorm',
+		category: 'random'
+	},
+	{
+		name: 'Dockerfilelint',
+		link: 'https://github.com/replicatedhq/dockerfilelint',
+		description: 'An opinionated Dockerfile linter.',
+		creator: 'replicatedhq',
+		category: 'other'
+	},
+	{
+		name: 'ember-template-lint',
+		link: 'https://github.com/rwjblue/ember-template-lint',
+		description: 'Linter for Ember or Handlebars templates.',
+		creator: 'rwjblue',
+		category: 'javascript'
+	},
+	{
+		name: 'JSONLint',
+		link: 'https://github.com/codenothing/jsonlint',
+		description:
+			'JSONLint is a JSON Linter that allows for comments in your JSON Files.',
+		creator: 'rwjblue',
+		category: 'json'
+	},
+	{
+		name: 'forkability',
+		link: 'https://github.com/basicallydan/forkability',
+		description:
+			'Forkability helps you to make your project more open-source-friendly by pointing out missing features and useful tips.',
+		creator: 'basicallydan',
+		category: 'random'
+	},
+	{
+		name: 'tldr-lint',
+		link: 'https://github.com/tldr-pages/tldr-lint',
+		description:
+			'tldr-lint is a linting tool for validating tldr pages. It can also format your pages for you!',
+		creator: 'tldr-pages',
+		category: 'random'
+	},
+	{
+		name: 'yaml-lint',
+		link: 'https://github.com/rasshofer/yaml-lint',
+		description: 'A simple (CLI) tool to lint YAML files',
+		creator: 'rasshofer',
+		category: 'other'
+	},
+	{
+		name: 'RespImageLint - Linter for Responsive Images',
+		link: 'https://github.com/ausi/respimagelint',
+		description:
+			'RespImageLint is a bookmarklet that checks images of a webpage against a list of common mistakes and best practises.',
+		creator: 'ausi',
+		category: 'random'
 	}
 ];
 

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "eslint src",
     "start": "npm run -s serve",
-    "build": "preact build",
+    "build": "preact build --template src/index.html",
     "serve": "preact serve",
     "deploy": "npm run build && cp now.json build/now.json && cd build && now && now alias",
     "dev": "preact watch"

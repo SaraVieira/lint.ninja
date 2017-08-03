@@ -6,4 +6,5 @@ export default (config, env, helpers) => {
 
 		options.staticFileGlobsIgnorePatterns.push(/.DS_Store/);
 	}
+
 };
