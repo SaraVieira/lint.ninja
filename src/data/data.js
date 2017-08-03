@@ -678,7 +678,7 @@ const linters = [
 		name: 'Alex',
 		link: 'https: //github.com/wooorm/alex',
 		description:
-			"Catch insensitive, inconsiderate writing",
+			'Catch insensitive, inconsiderate writing',
 		creator: 'wooorm',
 		category: 'random'
 	},
