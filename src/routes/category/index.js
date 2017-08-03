@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import capitalize from 'capitalize-it';
 import styled from 'styled-components';
-import linters from '../../data/data';
+import { getLintersByCategory } from '../../lib//api';
 import Linter from '../../components/linter/index';
 
 const CategoryWrapper = styled.main`
@@ -17,9 +17,7 @@ export default class Category extends Component {
 	};
 
 	getLinters(category) {
-		const linter = linters.filter(linter => linter.category === category);
-
-		this.setState({ linters: linter });
+		getLintersByCategory(category).then(linters => this.setState({ linters }));
 	}
 
 	// gets called when this route is navigated to

@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import capitalize from 'capitalize-it';
 import styled from 'styled-components';
-import linters from '../../data/data';
+import { getLintersBySearch } from '../../lib/api';
 import Linter from '../../components/linter/index';
 
 const CategoryWrapper = styled.main`
@@ -17,24 +17,7 @@ export default class SearchRoute extends Component {
 	};
 
 	getLinters(query) {
-		const queryLinters = linters.filter(linter => {
-			const name = linter.name;
-			const creator = linter.creator;
-			const description = linter.description;
-			const category = linter.category;
-			if (
-				(name && name.includes(query)) ||
-				(creator && creator.includes(query)) ||
-				(description && description.includes(query)) ||
-				(category && category.includes(query))
-			) {
-				return true;
-			}
-
-			return false;
-		});
-
-		this.setState({ linters: queryLinters });
+		getLintersBySearch(query).then(linters => this.setState({ linters }));
 	}
 
 	// gets called when this route is navigated to
@@ -43,8 +26,8 @@ export default class SearchRoute extends Component {
 	}
 
 	// gets when props change
-	componentWillReceiveProps() {
-		this.getLinters(this.props.query);
+	componentWillReceiveProps(nextProps) {
+		this.getLinters(nextProps.query);
 	}
 
 	// Note: `user` comes from the URL, courtesy of our router

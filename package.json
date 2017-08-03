@@ -27,6 +27,7 @@
     "preact-cli-sw-precache": "^1.0.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "capitalize-it": "^1.2.1",
     "preact": "^8.2.1",
     "preact-compat": "^3.16.0",

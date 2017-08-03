@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import styled from 'styled-components';
 import { Link } from 'preact-router/match';
-import linters from '../../data/data';
+import { getCategories } from '../../lib/api';
 
 const CardWrapper = styled.section`
 	width: 30%;
@@ -87,15 +87,7 @@ class Card extends Component {
 	state = { categories: null };
 
 	getCategories() {
-		const categories = linters.reduce((end, linter) => {
-			if (end.indexOf(linter.category) === -1) {
-				end.push(linter.category);
-			}
-
-			return end;
-		}, []);
-
-		this.setState({ categories });
+		getCategories().then(categories => this.setState({ categories }));
 	}
 
 	componentDidMount() {

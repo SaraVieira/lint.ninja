@@ -111,11 +111,9 @@ const Label = styled.label`
 class Search extends Component {
 	changeRoute(e) {
 		const value = e.target.value;
-		const input = e.target;
 
 		if (value.length > 1) {
 			route(`/search/${value}`);
-			input.focus();
 		}
 	}
 
