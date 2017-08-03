@@ -35,12 +35,18 @@ const Tag = styled.h2`
 	font-size: 30px;
 `;
 
-const Github = styled.a`
+const Social = styled.div`
 	position: absolute;
 	right: 48px;
 	top: 20px;
+	display: flex;
+	align-items: center;
 
-	&:after {
+	& a:last-child {
+		margin-left: 16px;
+	}
+
+	& a:after {
 		display: none;
 	}
 
@@ -51,13 +57,23 @@ const Github = styled.a`
 
 const Header = () =>
 	(<header>
-		<Github
-			href="https://github.com/SaraVieira/wutthelint"
-			target="_blank"
-			rel="noopener"
-		>
-			<img src={git} alt="Github" />
-		</Github>
+		<Social>
+			<a
+				href="https://twitter.com/share"
+				class="twitter-share-button"
+				data-via="NikkitaFTW"
+				data-hashtags="wutthelint"
+			>
+				Tweet
+			</a>
+			<a
+				href="https://github.com/SaraVieira/wutthelint"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<img src={git} alt="Github" />
+			</a>
+		</Social>
 		<Nav>
 			<Link href="/">
 				<Logo src={logo} alt="watthelint" />
