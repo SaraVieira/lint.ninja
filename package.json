@@ -5,26 +5,44 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint src",
+    "test:visual": "jest",
+    "test:size": "bundlesize",
     "start": "npm run -s serve",
-    "build": "preact build --template src/index.html",
+    "build": "preact build --template src/index.html -p",
     "serve": "preact serve",
-    "deploy": "npm run build && cp now.json build/now.json && cd build && now && now alias",
+    "deploy": "npm run build && npm run test:size && cp now.json build/now.json && cd build && now && now alias",
     "dev": "preact watch"
   },
   "alias": "wuththelint",
   "keywords": [],
   "author": "Sara Vieira",
-  "license": "ISC",
+  "license": "MIT",
   "eslintConfig": {
     "extends": "eslint-config-synacor"
   },
+  "bundlesize": [
+    {
+      "path": "./build/bundle.*.js",
+      "maxSize": "24 kB"
+    },
+    {
+      "path": "./build/route-*.js",
+      "maxSize": "35 kB"
+    },
+    {
+      "path": "./build/sw.js",
+      "maxSize": "3 kB"
+    }
+  ],
   "devDependencies": {
     "eslint": "^4.3.0",
     "eslint-config-synacor": "^1.0.1",
-    "flow-bin": "^0.51.1",
     "if-env": "^1.0.0",
-    "preact-cli": "^1.4.1",
-    "preact-cli-sw-precache": "^1.0.0"
+    "jest": "^20.0.4",
+    "jest-image-snapshot": "^0.1.0",
+    "navalia": "^1.2.0",
+    "npm-run-all": "^4.0.2",
+    "preact-cli": "^1.4.1"
   },
   "dependencies": {
     "animate-css-styled-components": "0.0.16",
@@ -33,7 +51,6 @@
     "preact": "^8.2.1",
     "preact-compat": "^3.16.0",
     "preact-router": "^2.5.5",
-    "react-transition-group": "1.x",
     "styled-components": "^2.1.1"
   }
 }

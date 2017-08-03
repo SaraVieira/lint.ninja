@@ -110,7 +110,7 @@ class Card extends Component {
 			<Section>
 				{categories
 					? categories.map(category =>
-						(<Wrapper>
+						(<Wrapper class="card-wrapper">
 							<SlideInUp duration="0.8s">
 								<CardWrapper>
 									<Logo>

@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import styled from 'styled-components';
+import { FadeIn } from 'animate-css-styled-components';
 
 const LintItem = styled.li`
 	display: flex;
@@ -8,10 +9,11 @@ const LintItem = styled.li`
 	align-items: center;
 `;
 
-const CreatorPic = styled.img`
-	width: 100px;
-	height: 100px;
-	margin-right: 16px;
+const Creator = styled.div`margin-left: 16px;`;
+
+const Pic = styled.img`
+	min-width: 100px;
+	height: 100px
 `;
 
 const Name = styled.h2`
@@ -22,12 +24,13 @@ const Name = styled.h2`
 const Description = styled.p`margin: 4px 0;`;
 
 const Linter = ({ linter }) =>
-	(<LintItem>
-		<CreatorPic
-			src={`https://github.com/${linter.creator}.png?size=200`}
-			alt={linter.creator}
-		/>
-		<div>
+	(<LintItem class="linter">
+		<FadeIn duration="0.8s" delay="0.3s">
+			<Pic
+				src={`https://github.com/${linter.creator}.png?size=100`}
+				alt={linter.creator}
+			/></FadeIn>
+		<Creator>
 			<Name>
 				<a href={linter.link}>
 					{linter.name}
@@ -39,7 +42,7 @@ const Linter = ({ linter }) =>
 			<a href={`https://github.com/${linter.creator}`}>
 				Github: {linter.creator}
 			</a>
-		</div>
+		</Creator>
 	</LintItem>);
 
 export default Linter;
