@@ -1,8 +1,10 @@
 import { h, Component } from 'preact';
 import capitalize from 'capitalize-it';
 import styled from 'styled-components';
+import { FadeInUp } from 'animate-css-styled-components';
 import { getLintersBySearch } from '../../lib/api';
 import Linter from '../../components/linter/index';
+import Loading from '../../components/loading/index';
 
 const CategoryWrapper = styled.main`
 	width: 80%;
@@ -38,7 +40,12 @@ export default class SearchRoute extends Component {
 					Results for {capitalize(query)}:
 				</h1>
 				<ul>
-					{linters && linters.map(linter => <Linter linter={linter} />)}
+					{linters
+						? linters.map(linter => (
+							<FadeInUp duration="0.8s">
+								<Linter linter={linter} />
+							</FadeInUp>))
+						: <Loading />}
 				</ul>
 			</CategoryWrapper>
 		);

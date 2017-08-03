@@ -2,17 +2,28 @@ import { h, Component } from 'preact';
 import styled from 'styled-components';
 import { Link } from 'preact-router/match';
 import { getCategories } from '../../lib/api';
+import Loading from '../../components/loading/index';
+import { SlideInUp } from 'animate-css-styled-components';
 
 const CardWrapper = styled.section`
-	width: 30%;
-	height: 300px;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: #404040;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	display: flex;
+	width: 100%;
+	height: 100%;
+`;
+
+const Wrapper = styled.div`
+	width: 30%;
+	height: 300px;
+	display: flex;
 	margin-bottom: 40px;
-	padding: 40px;
+
+	& > div {
+		width: 100%;
+	}
 
 	@media (max-width: 950px) {
 		width: 48%;
@@ -94,21 +105,26 @@ class Card extends Component {
 		this.getCategories();
 	}
 
-	render({ children }, { categories }) {
+	render({}, { categories }) {
 		return (
 			<Section>
-				{categories &&
-					categories.map(category =>
-						(<CardWrapper>
-							<Logo>
-								<Name>
-									<Link href={`/category/${category}`}>
-										{category.replace(/-/g, ' ')}
-									</Link>
-								</Name>
-							</Logo>
-						</CardWrapper>)
-					)}
+				{categories
+					? categories.map(category =>
+						(<Wrapper>
+							<SlideInUp duration="0.8s">
+								<CardWrapper>
+									<Logo>
+										<Name>
+											<Link href={`/category/${category}`}>
+												{category.replace(/-/g, ' ')}
+											</Link>
+										</Name>
+									</Logo>
+								</CardWrapper>
+							</SlideInUp>
+						</Wrapper>)
+					)
+					: <Loading />}
 			</Section>
 		);
 	}

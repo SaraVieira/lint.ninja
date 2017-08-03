@@ -3,6 +3,7 @@ import capitalize from 'capitalize-it';
 import styled from 'styled-components';
 import { getLintersByCategory } from '../../lib//api';
 import Linter from '../../components/linter/index';
+import { FadeInUp } from 'animate-css-styled-components';
 
 const CategoryWrapper = styled.main`
 	width: 80%;
@@ -34,7 +35,12 @@ export default class Category extends Component {
 					{capitalize(category)} Linters:
 				</h1>
 				<ul>
-					{linters && linters.map(linter => <Linter linter={linter} />)}
+					{linters &&
+						linters.map(linter =>
+							(<FadeInUp duration="0.8s">
+								<Linter linter={linter} />
+							</FadeInUp>)
+						)}
 				</ul>
 			</CategoryWrapper>
 		);
