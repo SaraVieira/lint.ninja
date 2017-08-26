@@ -35,18 +35,18 @@
     }
   ],
   "devDependencies": {
-    "bundlesize": "^0.13.2",
+    "bundlesize": "^0.14.0",
     "eslint": "^4.3.0",
     "eslint-config-synacor": "^1.0.1",
     "if-env": "^1.0.0",
     "jest": "^20.0.4",
-    "jest-image-snapshot": "^0.1.0",
+    "jest-image-snapshot": "^1.0.0",
     "navalia": "^1.2.0",
     "npm-run-all": "^4.0.2",
     "preact-cli": "^1.4.1"
   },
   "dependencies": {
-    "animate-css-styled-components": "0.0.16",
+    "animate-css-styled-components": "0.0.18",
     "axios": "^0.16.2",
     "capitalize-it": "^1.2.1",
     "preact": "^8.2.1",
