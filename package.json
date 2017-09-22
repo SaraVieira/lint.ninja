@@ -46,7 +46,7 @@
     "preact-cli": "^1.4.1"
   },
   "dependencies": {
-    "animate-css-styled-components": "0.0.19",
+    "animate-css-styled-components": "0.0.20",
     "axios": "^0.16.2",
     "capitalize-it": "^1.2.1",
     "preact": "^8.2.1",
