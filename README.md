@@ -1,6 +1,8 @@
 
 # WuttTheLint
 
+https://wuththelint.now.sh/
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/SaraVieira/wutthelint.svg)](https://greenkeeper.io/)
 
 ## Server
