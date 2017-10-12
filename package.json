@@ -43,7 +43,7 @@
     "jest-image-snapshot": "^1.0.0",
     "navalia": "^1.2.0",
     "npm-run-all": "^4.0.2",
-    "preact-cli": "^1.4.1"
+    "preact-cli": "^2.0.0"
   },
   "dependencies": {
     "animate-css-styled-components": "0.0.20",
