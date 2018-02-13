@@ -10,7 +10,7 @@
     "start": "npm run -s serve",
     "build": "preact build --template src/index.html -p",
     "serve": "preact serve",
-    "deploy": "npm run build && npm run test:size && cp now.json build/now.json && cd build && now && now alias",
+    "deploy": "npm run build && aws s3 cp build s3://wuththelint.com/ --recursive ",
     "dev": "preact watch"
   },
   "alias": "wuththelint",
