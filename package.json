@@ -10,8 +10,8 @@
     "start": "npm run -s serve",
     "build": "preact build --template src/index.html -p",
     "serve": "preact serve",
-    "deploy": "npm run build && aws s3 cp build s3://wuththelint.com/ --recursive ",
-    "dev": "preact watch"
+    "deploy": "npm run build && s3_website push ",
+    "dev": "preact watch --template src/index.html"
   },
   "alias": "wuththelint",
   "keywords": [],
@@ -53,6 +53,7 @@
     "capitalize-it": "^1.2.1",
     "preact": "^8.2.1",
     "preact-compat": "^3.16.0",
+    "preact-render-to-string": "^3.7.0",
     "preact-router": "^2.5.5",
     "styled-components": "^2.1.1"
   }
