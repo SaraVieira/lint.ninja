@@ -45,7 +45,9 @@
     "less-loader": "^4.0.5",
     "navalia": "^1.2.0",
     "npm-run-all": "^4.0.2",
-    "preact-cli": "^2.0.0"
+    "offline-plugin": "^4.9.0",
+    "preact-cli": "^2.0.0",
+    "preact-cli-lodash": "^1.1.0"
   },
   "dependencies": {
     "animate-css-styled-components": "0.0.20",
