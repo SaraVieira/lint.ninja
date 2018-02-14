@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://api.wuththelint.com/api';
+const baseUrl = 'http://api.wuththelint.com/';
 
 export const getCategories = () =>
 	axios.get(`${baseUrl}/linters/categories`).then(rsp => rsp.data.result);

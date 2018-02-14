@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint src",
-    "test:visual": "jest",
+    "lint": "eslint src",
     "test:size": "bundlesize",
+    "test": "run-s test:size lint",
     "start": "npm run -s serve",
     "build": "preact build --template src/index.html -p",
     "serve": "preact serve",
@@ -23,7 +23,7 @@
   "bundlesize": [
     {
       "path": "./build/bundle.*.js",
-      "maxSize": "24 kB"
+      "maxSize": "40 kB"
     },
     {
       "path": "./build/route-*.js",

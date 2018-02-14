@@ -1,7 +1,7 @@
 import App from './components/app';
 import { h, render } from 'preact';
 import { default as renderToString } from 'preact-render-to-string';
-import { ServerStyleSheet, injectGlobal } from 'styled-components'
+import { ServerStyleSheet, injectGlobal } from 'styled-components';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 injectGlobal`
@@ -112,16 +112,18 @@ a:after {
   border-color: #2795e9;
 }
 
-`
+`;
 
 if (typeof window === undefined) {
-    const sheet = new ServerStyleSheet()
-    const html = renderToString(sheet.collectStyles(<App />))
-    const styleTags = sheet.getStyleTags() // or sheet.getStyleElement()
+	/* eslint-disable */
+	const sheet = new ServerStyleSheet();
+	const html = renderToString(sheet.collectStyles(<App />));
+	const styleTags = sheet.getStyleTags();
+	/* eslint-enable */
 }
-if (typeof window !== "undefined") {
-    OfflinePluginRuntime.install();
-    render((
-        <App />
-    ), document.getElementById('root'));
+if (typeof window !== 'undefined') {
+	OfflinePluginRuntime.install();
+	render((
+		<App />
+	), document.getElementById('root'));
 }
