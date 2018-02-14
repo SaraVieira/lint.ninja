@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src",
     "test:size": "bundlesize",
-    "test": "run-s test:size lint",
+    "test": "run-s lint",
     "start": "npm run -s serve",
     "build": "preact build --template src/index.html -p",
     "serve": "preact serve",
