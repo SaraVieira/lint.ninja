@@ -52,7 +52,6 @@
   "dependencies": {
     "animate-css-styled-components": "0.0.20",
     "axios": "^0.17.0",
-    "capitalize-it": "^1.2.1",
     "preact": "^8.2.1",
     "preact-compat": "^3.16.0",
     "preact-render-to-string": "^3.7.0",
