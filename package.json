@@ -41,7 +41,7 @@
     "if-env": "^1.0.0",
     "jest": "^22.0.6",
     "jest-image-snapshot": "^1.0.0",
-    "less": "^2.7.3",
+    "less": "^3.0.0",
     "less-loader": "^4.0.5",
     "navalia": "^1.2.0",
     "npm-run-all": "^4.0.2",
