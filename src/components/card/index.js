@@ -94,6 +94,10 @@ const Section = styled.section`
 	justify-content: space-between;
 `;
 
+const TrailingPush = styled.div`
+	width: 30%
+`;
+
 class Card extends Component {
 	state = { categories: null };
 
@@ -123,7 +127,7 @@ class Card extends Component {
 								</CardWrapper>
 							</SlideInUp>
 						</Wrapper>)
-					)
+					).concat(Array(3).fill(<TrailingPush />))
 					: <Loading />}
 			</Section>
 		);
