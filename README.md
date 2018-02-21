@@ -1,14 +1,12 @@
 
-# WuttTheLint
+# Lint Ninja
 
-https://wuththelint.now.sh/
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/SaraVieira/wutthelint.svg)](https://greenkeeper.io/)
+http://lint.ninja/
 
 ## Server
-API: https://github.com/SaraVieira/wuthelint-server
+API: https://github.com/SaraVieira/lint.ninja-server/blob
 
-Add your own linters at: https://github.com/SaraVieira/wuthelint-server/blob/master/data/data.js
+Add your own linters at: https://github.com/SaraVieira/lint.ninja-server/blob/master/data/data.js
 
 
 ## License
